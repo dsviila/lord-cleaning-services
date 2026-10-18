@@ -143,48 +143,6 @@ export const trustReasons = [
   },
 ];
 
-export const cleaners = [
-  {
-    id: "1",
-    name: "Maya Olsen",
-    role: "Residential Specialist · 6 yrs",
-    rate: "$32/hr",
-    rating: 4.96,
-    jobs: 612,
-    image:
-      "/images/cleaners/Maya-Olsen-Home.webp",
-  },
-  {
-    id: "2",
-    name: "Daniel Reyes",
-    role: "Deep-Clean Specialist · 4 yrs",
-    rate: "$36/hr",
-    rating: 4.92,
-    jobs: 438,
-    image:
-      "/images/cleaners/Daniel-Reyes-Home.webp",
-  },
-  {
-    id: "3",
-    name: "Aisha Bennett",
-    role: "Eco Clean Lead · 5 yrs",
-    rate: "$34/hr",
-    rating: 5.0,
-    jobs: 521,
-    image:
-      "/images/cleaners/Aisha-Bennett-Home.webp",
-  },
-  {
-    id: "4",
-    name: "Liam Hartwell",
-    role: "Move-Out Pro · 3 yrs",
-    rate: "$30/hr",
-    rating: 4.88,
-    jobs: 287,
-    image:
-      "/images/cleaners/Liam-Hartwell-Home.webp",
-  },
-];
 
 export const testimonials = [
   {
