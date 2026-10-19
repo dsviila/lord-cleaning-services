@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="lg:col-span-5">
             <div className="flex items-center gap-3 mb-6">
               <img loading="lazy" decoding="async"
-                src="/images/brand/Lord-Logo.webp"
+                src="/images/brand/Lord-Logo-Small.webp"
                 alt="Lord Cleaning logo"
                 className="w-12 h-12 rounded-xl object-cover"
               />

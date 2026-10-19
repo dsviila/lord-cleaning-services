@@ -2,8 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/webp" href="/images/brand/Lord-Logo.webp" />
-    <link rel="apple-touch-icon" href="/images/brand/Lord-Logo.webp" />
+    <link rel="icon" type="image/webp" href="/images/brand/Lord-Logo-Small.webp" />
+    <link rel="apple-touch-icon" href="/images/brand/Lord-Logo-Small.webp" />
+    <link rel="preload" as="image" href="/images/hero/Hero-Living-Room-Mobile.webp" media="(max-width: 767px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/hero/Hero-Living-Room.webp" media="(min-width: 768px)" fetchpriority="high" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lord Cleaning Services | House Cleaning in Northern Virginia</title>
     <meta name="description" content="Lord Cleaning Services offers reliable residential and commercial cleaning across Northern Virginia. Get a free estimate in 2 hours — deep cleaning, recurring, move-out and more. New clients get 25% off." />
@@ -34,10 +36,6 @@
     fbq('init', '3428408427336138');
     fbq('track', 'PageView');
     </script>
-    <noscript>
-      <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=3428408427336138&ev=PageView&noscript=1"/>
-    </noscript>
     <!-- End Meta Pixel Code -->
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VS28ZQ8C2G"></script>
@@ -86,20 +84,42 @@
     </script>
   </head>
   <body>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=3428408427336138&ev=PageView&noscript=1"/>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script
-      src="https://readdy.ai/api/public/assistant/widget?projectId=996dde20-f6b1-46bd-b075-f238957dc228"
-      mode="hybrid"
-      voice-show-transcript="true"
-      theme="light"
-      size="compact"
-      position="bottom-right"
-      accent-color="#0F766E"
-      button-base-color="#111827"
-      button-accent-color="#99E6D8"
-      main-label="Lord Cleaning Assistant"
-      defer
-    ></script>
+    <!-- Readdy assistant widget: loaded after the page finishes, so it doesn't slow the first paint -->
+    <script>
+      (function () {
+        var loaded = false;
+        function loadWidget() {
+          if (loaded) return;
+          loaded = true;
+          var s = document.createElement("script");
+          s.src = "https://readdy.ai/api/public/assistant/widget?projectId=996dde20-f6b1-46bd-b075-f238957dc228";
+          var attrs = {
+            "mode": "hybrid",
+            "voice-show-transcript": "true",
+            "theme": "light",
+            "size": "compact",
+            "position": "bottom-right",
+            "accent-color": "#0F766E",
+            "button-base-color": "#111827",
+            "button-accent-color": "#99E6D8",
+            "main-label": "Lord Cleaning Assistant"
+          };
+          for (var k in attrs) s.setAttribute(k, attrs[k]);
+          document.body.appendChild(s);
+        }
+        window.addEventListener("load", function () {
+          setTimeout(loadWidget, 2500);
+        });
+        ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+          window.addEventListener(evt, loadWidget, { once: true, passive: true });
+        });
+      })();
+    </script>
   </body>
 </html>

@@ -250,7 +250,7 @@ function BookingHeader() {
     <header className="bg-background-50/80 backdrop-blur-md border-b border-background-200/70 px-4 md:px-8 py-4 flex items-center justify-between">
       <Link to="/" className="flex items-center gap-2">
         <img loading="lazy" decoding="async"
-          src="/images/brand/Lord-Logo.webp"
+          src="/images/brand/Lord-Logo-Small.webp"
           alt="Lord Cleaning logo"
           className="w-9 h-9 rounded-lg object-cover"
         />

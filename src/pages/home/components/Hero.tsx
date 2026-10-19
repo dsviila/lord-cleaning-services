@@ -39,11 +39,15 @@ export default function Hero() {
           borderRadius: `${radius}px`,
         }}
       >
-        <img
-          src="/images/hero/Hero-Living-Room.webp"
-          alt="Lord Cleaning Services team arriving at a home with a branded van"
-          className="absolute inset-0 w-full h-full object-cover object-top"
-        />
+        <picture>
+          <source media="(max-width: 767px)" srcSet="/images/hero/Hero-Living-Room-Mobile.webp" />
+          <img
+            src="/images/hero/Hero-Living-Room.webp"
+            fetchPriority="high"
+            alt="Lord Cleaning Services team arriving at a home with a branded van"
+            className="absolute inset-0 w-full h-full object-cover object-top"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-foreground-950/50 via-foreground-950/35 to-foreground-950/65"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,oklch(var(--foreground-950)/0.5),transparent_72%)]"></div>
 
@@ -53,7 +57,7 @@ export default function Hero() {
             Limited time · 25% off your first clean
           </span>
 
-          <h1 className="font-heading text-background-50 text-5xl md:text-7xl lg:text-[88px] font-medium leading-[1.02] mt-6 max-w-5xl drop-shadow-[0_2px_20px_rgba(15,23,42,0.55)] animate-fade-up">
+          <h1 className="font-heading text-background-50 text-5xl md:text-7xl lg:text-[88px] font-medium leading-[1.02] mt-6 max-w-5xl drop-shadow-[0_2px_20px_rgba(15,23,42,0.55)]">
             Reliable cleaning<br />you can trust.
           </h1>
 

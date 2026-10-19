@@ -54,7 +54,7 @@ export default function Navbar() {
           className="flex items-center gap-2.5 group"
         >
           <img
-            src="/images/brand/Lord-Logo.webp"
+            src="/images/brand/Lord-Logo-Small.webp"
             alt="Lord Cleaning logo"
             className="w-10 h-10 rounded-lg object-cover transition-transform group-hover:scale-105"
           />

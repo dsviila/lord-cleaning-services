@@ -3,7 +3,7 @@ import './i18n'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
-import 'remixicon/fonts/remixicon.css'
+import './styles/remixicon/remixicon-subset.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
