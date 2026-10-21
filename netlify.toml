@@ -2,7 +2,35 @@
   publish = "out"
   command = "npm run build"
 
+# Pages handled by the React app. Every other unknown URL returns a real 404
+# (public/404.html). If you add a new page/route to the site, add it here too.
 [[redirects]]
-  from = "/*"
+  from = "/booking"
   to = "/index.html"
   status = 200
+
+[[redirects]]
+  from = "/gallery"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/cleaners"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/services/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/.well-known/ai-catalog.json"
+  [headers.values]
+    Content-Type = "application/ai-catalog+json"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"

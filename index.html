@@ -90,7 +90,7 @@
     </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- Readdy assistant widget: loaded after the page finishes, so it doesn't slow the first paint -->
+    <!-- Readdy assistant widget: loaded on the first interaction (scroll/tap/key) or 10 s after load, so it doesn't slow the first paint -->
     <script>
       (function () {
         var loaded = false;
@@ -114,7 +114,7 @@
           document.body.appendChild(s);
         }
         window.addEventListener("load", function () {
-          setTimeout(loadWidget, 2500);
+          setTimeout(loadWidget, 10000);
         });
         ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
           window.addEventListener(evt, loadWidget, { once: true, passive: true });
