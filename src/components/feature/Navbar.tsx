@@ -7,6 +7,8 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
   const navigate = useNavigate();
+  // Pages with a light header area need the solid navbar from the start, or the white text is invisible.
+  const solid = scrolled || pathname === "/privacy" || pathname === "/cleaners";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -39,7 +41,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled
+        solid
           ? "bg-background-50/90 backdrop-blur-md border-b border-background-200/70"
           : "bg-transparent"
       }`}
@@ -60,7 +62,7 @@ export default function Navbar() {
           />
           <span
             className={`font-heading text-xl font-semibold tracking-tight ${
-              scrolled ? "text-foreground-950" : "text-background-50"
+              solid ? "text-foreground-950" : "text-background-50"
             }`}
           >
             Lord Cleaning Services
@@ -74,7 +76,7 @@ export default function Navbar() {
                 to={`/${l.href}`}
                 onClick={(e) => handleSectionClick(e, l.href)}
                 className={`text-sm font-medium transition-colors whitespace-nowrap ${
-                  scrolled
+                  solid
                     ? "text-foreground-700 hover:text-primary-600"
                     : "text-background-50/90 hover:text-background-50"
                 }`}
@@ -87,7 +89,7 @@ export default function Navbar() {
             <Link
               to="/gallery"
               className={`text-sm font-medium transition-colors whitespace-nowrap ${
-                scrolled
+                solid
                   ? "text-foreground-700 hover:text-primary-600"
                   : "text-background-50/90 hover:text-background-50"
               }`}
@@ -101,7 +103,7 @@ export default function Navbar() {
           <a
             href={business.phoneHref}
             className={`hidden lg:inline-flex items-center gap-1.5 text-sm font-medium whitespace-nowrap transition-colors ${
-              scrolled
+              solid
                 ? "text-foreground-800 hover:text-primary-600"
                 : "text-background-50/90 hover:text-background-50"
             }`}
@@ -124,7 +126,7 @@ export default function Navbar() {
         <button
           onClick={() => setOpen((v) => !v)}
           className={`md:hidden w-10 h-10 flex items-center justify-center rounded-full ${
-            scrolled ? "bg-background-100 text-foreground-900" : "bg-background-50/20 text-background-50"
+            solid ? "bg-background-100 text-foreground-900" : "bg-background-50/20 text-background-50"
           }`}
           aria-label="Toggle menu"
         >

@@ -98,7 +98,7 @@ export default function Footer() {
           </p>
           <ul className="flex flex-wrap items-center gap-6 text-xs text-background-200/70">
             <li><Link to="/gallery" className="hover:text-background-50">Gallery</Link></li>
-            <li><a href="#" className="hover:text-background-50">Privacy</a></li>
+            <li><Link to="/privacy" className="hover:text-background-50">Privacy</Link></li>
             <li><a href="#" className="hover:text-background-50">Terms</a></li>
             <li><a href="#contact" className="hover:text-background-50">Get Free Estimate</a></li>
           </ul>

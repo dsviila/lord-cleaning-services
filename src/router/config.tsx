@@ -7,6 +7,10 @@ const ServiceDetailPage = lazy(() => import("../pages/services/page"));
 const CleanersPage = lazy(() => import("../pages/cleaners/page"));
 const GalleryPage = lazy(() => import("../pages/gallery/page"));
 const BookingPage = lazy(() => import("../pages/booking/page"));
+const PrivacyPage = lazy(() => import("../pages/privacy/page"));
+// Private pages: not linked anywhere, not in the sitemap, served with noindex.
+const AgreementPage = lazy(() => import("../pages/agreement/page"));
+const AgreementBuilderPage = lazy(() => import("../pages/agreement/new/page"));
 
 const routes: RouteObject[] = [
   {
@@ -28,6 +32,18 @@ const routes: RouteObject[] = [
   {
     path: "/booking",
     element: <BookingPage />,
+  },
+  {
+    path: "/privacy",
+    element: <PrivacyPage />,
+  },
+  {
+    path: "/service-agreement",
+    element: <AgreementPage />,
+  },
+  {
+    path: "/service-agreement/new",
+    element: <AgreementBuilderPage />,
   },
   {
     path: "*",

@@ -29,7 +29,7 @@ export default function CleanersPage() {
         <div className="max-w-5xl">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-foreground-600 hover:text-primary-700 mb-5"
+            className="flex w-fit items-center gap-2 text-xs uppercase tracking-widest text-foreground-600 hover:text-primary-700 mb-5"
           >
             <i className="ri-arrow-left-line"></i>
             Back to home

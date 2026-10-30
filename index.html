@@ -25,6 +25,9 @@
     <meta name="twitter:image" content="https://lordcleaningservices.com/images/hero/Hero-Living-Room.webp" />
     <!-- Meta Pixel Code -->
     <script>
+    // Tracking is skipped on the private agreement pages: their links carry client details.
+    window.__lcsPrivatePage = location.pathname.indexOf('/service-agreement') === 0;
+    if (!window.__lcsPrivatePage) {
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -35,6 +38,7 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '3428408427336138');
     fbq('track', 'PageView');
+    }
     </script>
     <!-- End Meta Pixel Code -->
     <!-- Google Analytics -->
@@ -43,7 +47,10 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-VS28ZQ8C2G');
+      // No pageview on the private agreement pages (their links carry client details).
+      if (!window.__lcsPrivatePage) {
+        gtag('config', 'G-VS28ZQ8C2G');
+      }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -95,7 +102,7 @@
       (function () {
         var loaded = false;
         function loadWidget() {
-          if (loaded) return;
+          if (loaded || window.__lcsPrivatePage) return;
           loaded = true;
           var s = document.createElement("script");
           s.src = "https://readdy.ai/api/public/assistant/widget?projectId=996dde20-f6b1-46bd-b075-f238957dc228";

@@ -20,6 +20,22 @@
   status = 200
 
 [[redirects]]
+  from = "/privacy"
+  to = "/index.html"
+  status = 200
+
+# Private agreement pages (not linked or listed anywhere; also sent with noindex below)
+[[redirects]]
+  from = "/service-agreement"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/service-agreement/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
   from = "/services/*"
   to = "/index.html"
   status = 200
@@ -34,3 +50,15 @@
   for = "/llms.txt"
   [headers.values]
     Content-Type = "text/markdown; charset=utf-8"
+
+[[headers]]
+  for = "/service-agreement"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Referrer-Policy = "no-referrer"
+
+[[headers]]
+  for = "/service-agreement/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Referrer-Policy = "no-referrer"

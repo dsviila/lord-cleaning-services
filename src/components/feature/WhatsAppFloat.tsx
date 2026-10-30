@@ -1,6 +1,11 @@
+import { useLocation } from "react-router-dom";
 import { business } from "@/mocks/landing";
 
 export default function WhatsAppFloat() {
+  const { pathname } = useLocation();
+  // Hidden on the private agreement pages so it doesn't cover the signature area.
+  if (pathname.startsWith("/service-agreement")) return null;
+
   return (
     <a
       href={business.whatsappHref}
