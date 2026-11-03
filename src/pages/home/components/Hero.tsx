@@ -57,9 +57,9 @@ export default function Hero() {
             Limited time · 25% off your first clean
           </span>
 
-          <h1 className="font-heading text-background-50 text-5xl md:text-7xl lg:text-[88px] font-medium leading-[1.02] mt-6 max-w-5xl drop-shadow-[0_2px_20px_rgba(15,23,42,0.55)]">
+          <p className="font-heading tracking-[-0.01em] text-background-50 text-5xl md:text-7xl lg:text-[88px] font-medium leading-[1.02] mt-6 max-w-5xl drop-shadow-[0_2px_20px_rgba(15,23,42,0.55)]">
             Reliable cleaning<br />you can trust.
-          </h1>
+          </p>
 
           <p className="mt-6 text-background-50 text-base md:text-lg max-w-xl leading-relaxed drop-shadow-[0_1px_12px_rgba(15,23,42,0.6)] animate-fade-up">
             Professional residential and commercial cleaning across Northern Virginia.

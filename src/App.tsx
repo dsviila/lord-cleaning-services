@@ -3,10 +3,12 @@ import { BrowserRouter } from "react-router-dom";
 import { AppRoutes } from "./router";
 import ScrollToTop from "./components/feature/ScrollToTop";
 import WhatsAppFloat from "./components/feature/WhatsAppFloat";
+import Seo from "./seo/Seo";
 
 function App() {
   return (
     <BrowserRouter basename={__BASE_PATH__}>
+      <Seo />
       <ScrollToTop />
       <Suspense fallback={<div className="min-h-screen" />}>
         <AppRoutes />

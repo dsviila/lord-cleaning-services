@@ -25,9 +25,9 @@ export default function GalleryHero() {
             Our work in pictures
           </p>
 
-          <h1 className="font-heading text-background-50 text-4xl md:text-6xl lg:text-7xl font-medium leading-[1.05] max-w-4xl">
+          <p className="font-heading tracking-[-0.01em] text-background-50 text-4xl md:text-6xl lg:text-7xl font-medium leading-[1.05] max-w-4xl">
             See the standard, room by room.
-          </h1>
+          </p>
 
           <p className="mt-6 text-background-100 text-base md:text-lg max-w-2xl leading-relaxed">
             Real finishes from real visits across Northern Virginia. Browse by the kind of clean you
