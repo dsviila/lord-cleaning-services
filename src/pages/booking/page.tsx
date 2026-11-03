@@ -139,6 +139,7 @@ export default function BookingPage() {
   return (
     <main className="min-h-screen bg-background-100">
       <BookingHeader />
+      <h1 className="sr-only">Book a House Cleaning in Northern Virginia</h1>
 
       <div className="px-4 md:px-10 pt-8 pb-6">
         <StepIndicator

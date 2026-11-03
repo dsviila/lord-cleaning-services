@@ -29,9 +29,10 @@ export default function Seo() {
   useEffect(() => {
     const seo = getSeo(pathname);
     if (!seo) {
-      // Unknown route (404 page): keep it out of the index.
+      // Unknown route (404 page): keep it out of the index and drop the canonical.
       document.title = "Page Not Found | Lord Cleaning Services";
       setMeta("name", "robots", "noindex, nofollow");
+      document.head.querySelector('link[rel="canonical"]')?.remove();
       return;
     }
 
